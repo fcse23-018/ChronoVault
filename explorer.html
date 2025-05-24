@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChronoVault: Master Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="explorer-era">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <img src="images/logo.png" alt="ChronoVault Logo">
+      </div>
+    </div>
+    <div class="navbar-breadcrumb">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> > <span>Master Explorer</span>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <div class="floating-nav">
+        <a href="index.html">Home</a>
+        <a href="egypt.html">Egypt</a>
+        <a href="rome.html">Rome</a>
+        <a href="medieval.html">Medieval</a>
+        <a href="renaissance.html">Renaissance</a>
+        <a href="industrial.html">Industrial</a>
+        <a href="modern.html">Modern</a>
+        <a href="explorer.html">Explorer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <header class="hero" role="banner">
+    <div class="hero-content">
+      <h1>Master Explorer</h1>
+      <p>Congratulations! You've unlocked all eras!</p>
+      <p class="subtitle">A Timeless Legend of History</p>
+    </div>
+  </header>
+  <main>
+    <section class="achievement-card container" aria-labelledby="journey-heading">
+      <h2 id="journey-heading">Your Epic Journey Through Time</h2>
+      <p>Embark on a grand odyssey where you’ve unearthed the mysteries of Ancient Egypt’s pyramids, strategized with Roman emperors, defended medieval fortresses, crafted masterpieces alongside Renaissance visionaries, fueled the engines of the Industrial Revolution, and pioneered innovations that define the Modern Era. As a Master Explorer, you’ve triumphed over all 7 historical eras, weaving your legacy into the tapestry of time. Celebrate your unparalleled achievement and revisit your epic adventures below!</p>
+      <div class="achievement-container">
+        <div class="achievement-item" data-era="master-explorer">
+          <img src="images/master-badge.webp" alt="Master Explorer Badge, a golden emblem of historical mastery">
+          <p>Master Explorer Badge: A radiant symbol of your conquest across all eras, marking you as a true guardian of history.</p>
+        </div>
+        <div class="achievement-item" data-era="trophy">
+          <img src="images/trophy.webp" alt="Master Explorer Trophy, a shining award for completing the ChronoVault journey">
+          <p>Master Explorer Trophy: A gleaming testament to your dedication, awarded for mastering the ChronoVault’s challenges.</p>
+        </div>
+      </div>
+      <h3>Your Conquered Eras</h3>
+      <p>Reflect on the eras you’ve mastered, each a chapter in your extraordinary journey through history.</p>
+      <div id="visited-eras" class="era-grid"></div>
+      <div class="cta-buttons">
+        <button onclick="randomEra()" aria-label="Replay a random historical era">Replay a Random Era</button>
+        <button onclick="shareAchievement()" aria-label="Share your Master Explorer achievement">Share Your Achievement</button>
+      </div>
+      <div id="confetti" aria-hidden="true"></div>
+    </section>
+    <section class="achievement-card container" aria-labelledby="badges-heading">
+      <h2 id="badges-heading">Your Achievement Badges</h2>
+      <p>Marvel at your collection of badges, each a shining emblem of your mastery over a historical era, earned through courage and curiosity.</p>
+      <div class="badges-grid"></div>
+    </section>
+    <section class="achievement-card container" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading">Your Journey Timeline</h2>
+      <p>Trace the milestones of your adventures, from ancient wonders to modern marvels, etched forever in the annals of ChronoVault.</p>
+      <div class="timeline-entries"></div>
+    </section>
+    <section class="achievement-card container" aria-labelledby="map-heading">
+      <h2 id="map-heading">Explore Your World</h2>
+      <p>Journey across the globe by clicking the map, revisiting the iconic regions where you shaped history’s greatest moments.</p>
+      <div class="map-container">
+        <img src="images/world-map.webp" alt="Interactive World Map of Historical Eras" usemap="#era-map" class="map-image">
+        <map name="era-map"></map>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>ChronoVault © 2025 | Created with passion for history</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

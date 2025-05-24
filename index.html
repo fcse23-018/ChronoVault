@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChronoVault: Journey Through Time</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
+<body class="index-page">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <img src="images/logo.png" alt="ChronoVault Logo">
+      </div>
+    </div>
+    <div class="navbar-breadcrumb">
+      <div class="breadcrumb">
+        <span>Home</span>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <div class="floating-nav">
+        <a href="index.html">Home</a>
+        <a href="egypt.html">Egypt</a>
+        <a href="rome.html">Rome</a>
+        <a href="medieval.html">Medieval</a>
+        <a href="renaissance.html">Renaissance</a>
+        <a href="industrial.html">Industrial</a>
+        <a href="modern.html">Modern</a>
+        <a href="explorer.html">Explorer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to ChronoVault</h1>
+      <p>Journey Through the Ages: Unlock the Secrets of History!</p>
+    </div>
+  </header>
+  <main>
+    <section class="content container">
+      <h2>Begin Your Journey</h2>
+      <p>Explore the wonders of history, from the pyramids of Egypt to the innovations of the modern era.</p>
+      <div class="video-gallery">
+        <div class="video-item">
+          <video class="intro-video" controls autoplay muted aria-label="ChronoVault teaser video">
+            <source src="images/intro-teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag. Please ensure 'intro-teaser.mp4' is available in the 'images' directory.
+          </video>
+          <p>Watch our teaser to start your adventure!</p>
+        </div>
+      </div>
+    </section>
+    <section class="era-grid">
+      <div class="era-card" data-unlocked="true">
+        <img src="images/egypt-card.webp" alt="Ancient Egypt" class="era-image">
+        <h3>Ancient Egypt</h3>
+        <p>Discover the land of pharaohs and pyramids.</p>
+        <a href="egypt.html" class="button">Explore</a>
+        <span class="era-badge">Unlocked</span>
+      </div>
+      <div class="era-card" data-unlocked="true">
+        <img src="images/rome-card.webp" alt="Ancient Rome" class="era-image">
+        <h3>Ancient Rome</h3>
+        <p>Experience the glory of the Roman Empire.</p>
+        <a href="rome.html" class="button">Explore</a>
+        <span class="era-badge">Unlocked</span>
+      </div>
+      <div class="era-card" data-unlocked="true">
+        <img src="images/medieval-card.webp" alt="Medieval Era" class="era-image">
+        <h3>Medieval Era</h3>
+        <p>Live the age of knights and castles.</p>
+        <a href="medieval.html" class="button">Explore</a>
+        <span class="era-badge">Unlocked</span>
+      </div>
+      <div class="era-card" data-unlocked="true">
+        <img src="images/renaissance-card.webp" alt="Renaissance" class="era-image">
+        <h3>Renaissance</h3>
+        <p>Embrace the rebirth of art and science.</p>
+        <a href="renaissance.html" class="button">Explore</a>
+        <span class="era-badge">Unlocked</span>
+      </div>
+      <div class="era-card" data-unlocked="true">
+        <img src="images/industrial-card.webp" alt="Industrial Era" class="era-image">
+        <h3>Industrial Era</h3>
+        <p>Witness the rise of machines and industry.</p>
+        <a href="industrial.html" class="button">Explore</a>
+        <span class="era-badge">Unlocked</span>
+      </div>
+      <div class="era-card" data-unlocked="true">
+        <img src="images/modern-card.webp" alt="Modern Era" class="era-image">
+        <h3>Modern Era</h3>
+        <p>Explore the innovations of today.</p>
+        <a href="modern.html" class="button">Explore</a>
+        <span class="era-badge">Unlocked</span>
+      </div>
+    </section>
+    <section class="cta-buttons container">
+      <button onclick="randomEra()">Random Era</button>
+      <button id="unlock-explorer" disabled>Unlock Master Explorer</button>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>ChronoVault © 2025 | Created with passion for history</p>
+  </footer>
+  <div id="badge" class="badge">New Era Unlocked!</div>
+  <script src="js/main.js"></script>
+</body>
+</html>

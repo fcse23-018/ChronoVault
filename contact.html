@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChronoVault: Contact Us</title>
+  <!-- Link to stylesheet and Google Fonts -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Favicon links for browser and device icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
+<body class="contact-page">
+  <!-- Navigation bar with logo left at top, breadcrumbs above centered menu -->
+  <nav class="navbar">
+    <!-- Container for left-aligned logo -->
+    <div class="navbar-left">
+      <!-- Logo positioned on the far left -->
+      <div class="logo">
+        <img src="images/logo.png" alt="ChronoVault Logo">
+      </div>
+    </div>
+    <!-- Container for left-aligned breadcrumbs -->
+    <div class="navbar-breadcrumb">
+      <!-- Breadcrumb navigation with clear path -->
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> > <span>Contact</span>
+      </div>
+    </div>
+    <!-- Container for centered navigation menu -->
+    <div class="navbar-center">
+      <!-- Navigation menu centered horizontally -->
+      <div class="floating-nav">
+        <a href="index.html">Home</a>
+        <a href="egypt.html">Egypt</a>
+        <a href="rome.html">Rome</a>
+        <a href="medieval.html">Medieval</a>
+        <a href="renaissance.html">Renaissance</a>
+        <a href="industrial.html">Industrial</a>
+        <a href="modern.html">Modern</a>
+        <a href="explorer.html">Explorer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero section with title -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Contact Us</h1>
+      <p>Reach out with questions or feedback!</p>
+    </div>
+  </header>
+  <!-- Main content with contact form and info -->
+  <main>
+    <section class="content container">
+      <h2>Get in Touch</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder=" " required>
+          <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder=" " maxlength="500" required></textarea>
+          <label for="message">Message</label>
+          <p id="char-count">0/500</p>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <p><span class="icon">📍</span> 674 Kudumatse,Mahalapye, Botswana</p>
+        <p><span class="icon">📧</span> <a href="mailto:info@chronovault.com">info@chronovault.com</a></p>
+        <p><span class="icon">📞</span> <a href="tel:+1234567890">+1 (267) 873-890</a></p>
+      </div>
+    </section>
+  </main>
+  <!-- Footer with copyright -->
+  <footer class="footer">
+    <p>ChronoVault © 2025 | Created with passion for history</p>
+  </footer>
+  <!-- Link to JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
