@@ -58,24 +58,28 @@
   <main>
     <section class="content container">
       <h2>Get in Touch</h2>
+      <!-- Contact form with validation error spans -->
       <form id="contact-form">
         <div class="form-group">
           <input type="text" id="name" placeholder=" " required>
+          <span class="error"></span>
           <label for="name">Name</label>
         </div>
         <div class="form-group">
           <input type="email" id="email" placeholder=" " required>
+          <span class="error"></span>
           <label for="email">Email</label>
         </div>
         <div class="form-group">
           <textarea id="message" placeholder=" " maxlength="500" required></textarea>
+          <span class="error"></span>
           <label for="message">Message</label>
           <p id="char-count">0/500</p>
         </div>
         <button type="submit">Send Message</button>
       </form>
       <div class="contact-info">
-        <p><span class="icon">📍</span> 674 Kudumatse,Mahalapye, Botswana</p>
+        <p><span class="icon">📍</span> 674 Kudumatse, Mahalapye, Botswana</p>
         <p><span class="icon">📧</span> <a href="mailto:info@chronovault.com">info@chronovault.com</a></p>
         <p><span class="icon">📞</span> <a href="tel:+1234567890">+1 (267) 873-890</a></p>
       </div>
