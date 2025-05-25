@@ -1023,6 +1023,20 @@ form {
 .form-group {
   position: relative;
   margin-bottom: 20px;
+  padding-bottom: 20px; /* Space for error messages */
+  min-height: 60px; /* Ensure space for input and error */
+}
+
+/* Form Error Messages - Display validation errors below inputs */
+.form-group .error {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #DC3545;
+  font-size: 0.8rem;
+  display: block;
+  text-align: left;
 }
 
 .form-group label {
@@ -1034,12 +1048,12 @@ form {
   pointer-events: none;
 }
 
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:focus + label,
-.form-group textarea:not(:placeholder-shown) + label,
-.form-group select:focus + label,
-.form-group select:not(:placeholder-shown) + label {
+.form-group input:focus + .error + label,
+.form-group input:not(:placeholder-shown) + .error + label,
+.form-group textarea:focus + .error + label,
+.form-group textarea:not(:placeholder-shown) + .error + label,
+.form-group select:focus + .error + label,
+.form-group select:not(:placeholder-shown) + .error + label {
   top: -20px;
   font-size: 0.8rem;
   color: #8B4513;
@@ -1071,6 +1085,7 @@ form button:hover {
   font-size: 0.8rem;
   color: #000000;
   text-align: right;
+  margin-top: 5px;
 }
 
 .contact-info .icon {
@@ -1229,6 +1244,16 @@ form button:hover {
   /* Scale intro video for large tablets */
   .intro-video {
     max-width: 500px;
+  }
+
+  /* Adjust form error spacing */
+  .form-group {
+    padding-bottom: 18px;
+    min-height: 55px;
+  }
+
+  .form-group .error {
+    font-size: 0.75rem;
   }
 }
 
@@ -1447,6 +1472,16 @@ form button:hover {
   .intro-video {
     max-width: 100%;
   }
+
+  /* Adjust form error spacing for smaller screens */
+  .form-group {
+    padding-bottom: 16px;
+    min-height: 50px;
+  }
+
+  .form-group .error {
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1580,5 +1615,15 @@ form button:hover {
   /* Full-width intro video for small mobiles */
   .intro-video {
     max-width: 100%;
+  }
+
+  /* Adjust form error spacing for small screens */
+  .form-group {
+    padding-bottom: 14px;
+    min-height: 45px;
+  }
+
+  .form-group .error {
+    font-size: 0.65rem;
   }
 }
