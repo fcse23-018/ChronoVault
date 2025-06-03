@@ -300,14 +300,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Validate Name
-      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
-        isValid = false;
-        const error = nameInput.parentElement.querySelector('.error');
-        error.textContent = 'Name must be at least 2 characters';
-        nameInput.classList.add('shake');
-        setTimeout(() => nameInput.classList.remove('shake'), 500);
-      }
-
+     // Validate Name
+const nameRegex = /^[A-Za-z\s-]+$/; // Allows letters, spaces, and hyphens
+if (!nameInput.value.trim() || nameInput.value.trim().length < 2 || !nameRegex.test(nameInput.value.trim())) {
+  isValid = false;
+  const error = nameInput.parentElement.querySelector('.error');
+  error.textContent = !nameInput.value.trim() ? 'Name is required' : 
+                      nameInput.value.trim().length < 2 ? 'Name must be at least 2 characters' : 
+                      'Name can only contain letters, spaces, or hyphens';
+  nameInput.classList.add('shake');
+  setTimeout(() => nameInput.classList.remove('shake'), 500);
+}
       // Validate Email
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
